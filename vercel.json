@@ -1,0 +1,17 @@
+{
+    "builds": [
+        {
+            "src": "intellicx_crm/wsgi.py",
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "50mb"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "intellicx_crm/wsgi.py"
+        }
+    ]
+}
